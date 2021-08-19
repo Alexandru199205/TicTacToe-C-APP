@@ -46,12 +46,12 @@ namespace TicTacToe
 
         private void Button_Click(object sender, EventArgs e)
         {
-            Button bt = sender as Button;
+             Button bt = sender as Button;
             bt.Enabled = false;
             bt.BackColor = Color.Orange;
             if (who == 'o')
             {
-                bt.Text = "o";
+                bt.Text = "o"; 
                 if (B1.Text == B2.Text && B2.Text == B3.Text && B2.Text != "" ||
                      B4.Text == B5.Text && B5.Text == B6.Text && B4.Text != "" ||
                      B7.Text == B8.Text && B8.Text == B9.Text && B8.Text != "" ||
@@ -72,7 +72,7 @@ namespace TicTacToe
             }
             else if (who == 'x')
             {
-                bt.Text = "x";
+                 bt.Text = "x";
                 if (B1.Text == B2.Text && B2.Text == B3.Text && B2.Text != "" ||
                     B4.Text == B5.Text && B5.Text == B6.Text && B4.Text != "" ||
                     B7.Text == B8.Text && B8.Text == B9.Text && B8.Text != "" ||
