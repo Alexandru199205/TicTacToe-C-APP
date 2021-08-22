@@ -23,18 +23,19 @@ namespace TicTacToe
 
         private void NewGaneToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         // The logig needed to establish the winner.
             who = 'o';
             movement = 0;
-            B1.Enabled = true; B1.Text = ""; B1.BackColor = Color.White;
-            B2.Enabled = true; B2.Text = ""; B2.BackColor = Color.White;
-            B3.Enabled = true; B3.Text = ""; B3.BackColor = Color.White;
-            B4.Enabled = true; B4.Text = ""; B4.BackColor = Color.White;
-            B5.Enabled = true; B5.Text = ""; B5.BackColor = Color.White;
-            B6.Enabled = true; B6.Text = ""; B6.BackColor = Color.White;
-            B7.Enabled = true; B7.Text = ""; B7.BackColor = Color.White;
-            B8.Enabled = true; B8.Text = ""; B8.BackColor = Color.White;
-            B9.Enabled = true; B9.Text = ""; B9.BackColor = Color.White;
+            Button[,] buttonsarray = new Button[,] { { B1, B2, B3 }, { B4, B5, B6 }, { B7, B8, B9 } };
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    buttonsarray[i, j].Enabled = true;
+                    buttonsarray[i, j].Text = "";
+                    buttonsarray[i, j].BackColor = Color.White;
+                }
+            }
+           
             tableLayoutPanel1.Enabled = true;
         }
 
@@ -46,9 +47,11 @@ namespace TicTacToe
 
         private void Button_Click(object sender, EventArgs e)
         {
-             Button bt = sender as Button;
+            // The logic needed to establish the winner.
+
+            Button bt = sender as Button;
             bt.Enabled = false;
-            bt.BackColor = Color.Orange;
+            bt.BackColor = Color.DarkViolet;
             if (who == 'o')
             {
                 bt.Text = "o"; 
