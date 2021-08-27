@@ -120,5 +120,9 @@ namespace TicTacToe
 
         }
 
+        private void TicTacToeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

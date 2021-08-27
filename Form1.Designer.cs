@@ -228,12 +228,14 @@
             this.ClientSize = new System.Drawing.Size(495, 403);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(900, 900);
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "TicTacToeForm";
             this.ShowIcon = false;
             this.Text = "TicTacToe";
+            this.Load += new System.EventHandler(this.TicTacToeForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
